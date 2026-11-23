@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plan Anual Interactivo - Colegio Montano</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FFFFFF;
+            color: #1F3C88;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+    <header class="bg-[#1F3C88] text-white shadow-md p-4 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div class="flex items-center gap-4">
+            <img src="https://admisiones.colegiomontano.edu.gt/assets/img/logo-cm-blanco.webp" alt="Logo Colegio Montano" style="max-height: 50px;" onerror="this.src='https://placehold.co/150x50/1F3C88/FFFFFF?text=Colegio+Montano'">
+            <div>
+                <h1 class="text-lg font-bold"><i>Colegio Montano</i></h1>
+                <p class="text-sm opacity-90"><i>Plan Anual Interactivo - Ciclo 2027</i></p>
+            </div>
+        </div>
+        <div class="flex flex-wrap items-center gap-4 text-sm bg-[#3F72AF] px-4 py-2 rounded-lg">
+            <span><i>Curso: Comunicación y Lenguaje</i></span>
+            <span><i>Grado: Primero Básico</i></span>
+            <span><i>Docente: Wendy Stephany Godoy Alvizures</i></span>
+        </div>
+        <button onclick="toggleFullscreen()" class="bg-[#F2C94C] text-[#1F3C88] font-bold px-4 py-2 rounded-lg shadow hover:bg-yellow-400 transition flex items-center gap-2">
+            <span>🖥️</span> <i>Pantalla Completa</i>
+        </button>
+    </header>
+
+    <nav class="bg-[#3F72AF] p-2 flex overflow-x-auto gap-2 justify-start md:justify-center shadow-inner">
+        <button onclick="switchTab('tab1')" id="btn-tab1" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#F2C94C] text-[#1F3C88] transition"><i>I) Descriptor</i></button>
+        <button onclick="switchTab('tab2')" id="btn-tab2" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>II) Objetivos</i></button>
+        <button onclick="switchTab('tab3')" id="btn-tab3" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>III) Competencias</i></button>
+        <button onclick="switchTab('tab4')" id="btn-tab4" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>IV) Indicadores</i></button>
+        <button onclick="switchTab('tab5')" id="btn-tab5" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>V) Métodos</i></button>
+        <button onclick="switchTab('tab6')" id="btn-tab6" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>VI) Bibliografía</i></button>
+        <button onclick="switchTab('tab7')" id="btn-tab7" class="tab-btn px-4 py-2 rounded-lg font-semibold bg-[#3F72AF] text-white hover:bg-opacity-80 transition"><i>VII) Contenidos</i></button>
+    </nav>
+
+    <main class="flex-grow p-6 max-w-6xl mx-auto w-full">
+
+        <!-- Pestaña I: Descriptor -->
+        <section id="tab1" class="tab-content space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>I) Descriptor del Curso</i></h2>
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm space-y-4">
+                <p><i>El área de Comunicación y Lenguaje propicia el espacio en el cual los alumnos aprenden funciones, significados, normas del lenguaje, así como su utilidad como herramienta para apropiarse de la realidad e interactuar con ella. Durante el desarrollo del área se comprenden dos componentes principales: escuchar, hablar y actitudes comunicativas; leer, escribir, creación y producción comunicativa.</i></p>
+                <div class="grid md:grid-cols-2 gap-4 mt-4">
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-[#3F72AF] mb-2"><i>Escuchar, hablar y actitudes comunicativas</i></h3>
+                        <p class="text-sm"><i>Desarrolla competencias para recibir, producir y organizar mensajes orales en forma crítica y creativa, fomentando la toma de decisiones grupales mediante el diálogo y el respeto por otras culturas.</i></p>
+                    </div>
+                    <div class="bg-white p-4 rounded-lg border border-gray-200 shadow-sm">
+                        <h3 class="font-bold text-[#3F72AF] mb-2"><i>Leer, escribir y producción comunicativa</i></h3>
+                        <p class="text-sm"><i>Desarrolla la capacidad de identificar, procesar, organizar y divulgar información escrita, apoyando la formación del pensamiento, la imaginación y la construcción de nuevos conocimientos.</i></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña II: Objetivos Generales -->
+        <section id="tab2" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>II) Objetivos Generales</i></h2>
+            <div class="grid gap-4">
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                    <span class="bg-[#1F3C88] text-white px-3 py-1 rounded-full font-bold">1</span>
+                    <p><i>Se comunica en forma oral, atendiendo a las intenciones, la situación comunicativa, sus recursos expresivos, entre otros.</i></p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                    <span class="bg-[#1F3C88] text-white px-3 py-1 rounded-full font-bold">2</span>
+                    <p><i>Lee comprensivamente y con pensamiento crítico, distintos tipos de textos. Desarrolla habilidades de entendimiento, comprensión e interpretación de lo que lee.</i></p>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm flex items-start gap-4">
+                    <span class="bg-[#1F3C88] text-white px-3 py-1 rounded-full font-bold">3</span>
+                    <p><i>Produce textos de distintos tipos discursivos. Redacta textos en forma autónoma, según las distintas intenciones y situaciones comunicativas.</i></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña III: Competencias -->
+        <section id="tab3" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>III) Competencias del Área y Competencias CM</i></h2>
+            
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm space-y-3">
+                <h3 class="text-lg font-bold text-[#3F72AF]"><i>Competencias Académicas del Área</i></h3>
+                <ul class="list-disc pl-5 space-y-2">
+                    <li><i>Se comunica en forma oral, atendiendo a las intenciones, la situación comunicativa y sus recursos expresivos.</i></li>
+                    <li><i>Desarrolla habilidades de entendimiento, comprensión e interpretación de lo que lee.</i></li>
+                    <li><i>Redacta textos en forma autónoma, según las distintas intenciones y situaciones comunicativas.</i></li>
+                </ul>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm space-y-3">
+                <h3 class="text-lg font-bold text-[#3F72AF]"><i>Competencias Institucionales CM (Habilidades Blandas e Integrales)</i></h3>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-3">
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Pensamiento crítico y resolución de problemas</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Colaboración y trabajo en equipo</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Competencias digitales</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Comunicación efectiva y escucha activa</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Creatividad e innovación</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Aprendizaje autónomo y adaptabilidad</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Conciencia global y cultural</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Ética y ciudadanía digital</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Gestión emocional y resiliencia</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Conciencia ecológica y sostenibilidad</i></div>
+                    <div class="bg-white p-3 rounded border border-gray-200 text-sm"><i>Desempeño de roles de liderazgo</i></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña IV: Indicadores de Logro -->
+        <section id="tab4" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>IV) Indicadores de Logro</i></h2>
+            <div class="space-y-4">
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#3F72AF] mb-2"><i>Indicador 1</i></h3>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li><i>Infiere el significado del mensaje tomando en cuenta el contexto, las intenciones del emisor y sus propios propósitos de escucha.</i></li>
+                        <li><i>Controla la eficacia de la propia comunicación y la modifica al saber repetir, ampliar, parafrasear el mensaje o utilizar otro tipo de registro lingüístico.</i></li>
+                        <li><i>Muestra empatía hacia su interlocutor y su mensaje, con relación al sentido, finalidades del discurso y punto de vista.</i></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#3F72AF] mb-2"><i>Indicador 2</i></h3>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li><i>Regula su fluidez lectora, según el tipo de texto.</i></li>
+                        <li><i>Desarrolla habilidades de comprensión avanzada.</i></li>
+                        <li><i>Lee con placer obras literarias, especialmente de autores guatemaltecos.</i></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-4 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#3F72AF] mb-2"><i>Indicador 3</i></h3>
+                    <ul class="list-disc pl-5 space-y-1 text-sm">
+                        <li><i>Escribe textos claros y precisos, teniendo en cuenta las fases de la redacción.</i></li>
+                        <li><i>Redacta textos apegados a la gramática del idioma.</i></li>
+                        <li><i>Valora la precisión y corrección en lo que escribe y publica.</i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pestaña V: Métodos Didácticos -->
+        <section id="tab5" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>V) Métodos Didácticos Institucionales (Período Doble - 70 minutos)</i></h2>
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#1F3C88] text-lg mb-2"><i>1. Introducción motivante</i></h3>
+                    <p class="text-sm"><i>Activación de presaberes del alumno mediante cantos, discusiones, adivinanzas, lluvia de ideas y juegos pedagógicos.</i></p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#1F3C88] text-lg mb-2"><i>2. Trabajo individual</i></h3>
+                    <p class="text-sm"><i>Puesta en marcha de las potencialidades, habilidades y destrezas individuales utilizando herramientas como trifolios, proyectos, carteles y estudio dirigido.</i></p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#1F3C88] text-lg mb-2"><i>3. Trabajo en equipo (Cooperativo)</i></h3>
+                    <p class="text-sm"><i>Interacción activa bajo el lema institucional: "Todos para uno y uno para todos", unificando destrezas personales para cumplir metas comunes con roles definidos.</i></p>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm">
+                    <h3 class="font-bold text-[#1F3C88] text-lg mb-2"><i>4. Plenaria</i></h3>
+                    <p class="text-sm"><i>Espacio rotativo para fomentar la oratoria, expresión de sentimientos y exposición de conclusiones grupales ante el resto de la clase.</i></p>
+                </div>
+            </div>
+            <div class="bg-blue-50 p-4 rounded-xl border border-blue-200">
+                <p class="text-sm text-[#1F3C88]"><i>Enfoque metodológico: Constructivismo activo, Aprendizaje Basado en Proyectos (ABP) y evaluación formativa continua durante toda la jornada.</i></p>
+            </div>
+        </section>
+
+        <!-- Pestaña VI: Bibliografía -->
+        <section id="tab6" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>VI) Bibliografía y Fuentes de Referencia</i></h2>
+            <ul class="bg-gray-50 p-6 rounded-xl border border-gray-200 shadow-sm space-y-3 list-disc pl-5">
+                <li><i>CNB Guatemala. Malla curricular Primer grado - CNB.</i></li>
+                <li><i>COMUNICACIÓN Y LENGUAJE 7. Editorial Susaeta S.A., 2018.</i></li>
+                <li><i>Materiales digitales de diversas páginas educativas institucionales.</i></li>
+            </ul>
+        </section>
+
+        <!-- Pestaña VII: Contenidos -->
+        <section id="tab7" class="tab-content hidden space-y-6">
+            <h2 class="text-2xl font-bold text-[#1F3C88] border-b-2 border-[#F2C94C] pb-2"><i>VII) Secuencia de Contenidos por Unidades</i></h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm space-y-2">
+                    <h3 class="font-bold text-[#1F3C88] text-lg"><i>Unidad I: Ortografía y Redacción</i></h3>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li><i>¿Qué es la Ortografía?</i></li>
+                        <li><i>Palabras según su número de sílabas y acento.</i></li>
+                        <li><i>Signos de puntuación, entonación y auxiliares.</i></li>
+                        <li><i>Uso correcto de consonantes (b, v, g, j, s, z, etc.).</i></li>
+                        <li><i>¿Qué es Redacción y análisis de párrafos (ideas principales y secundarias).</i></li>
+                        <li><i>Esquemas y organizadores gráficos.</i></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm space-y-2">
+                    <h3 class="font-bold text-[#1F3C88] text-lg"><i>Unidad II: Tradición Oral y Literatura</i></h3>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li><i>Literatura y Tradición oral.</i></li>
+                        <li><i>Géneros y subgéneros literarios.</i></li>
+                        <li><i>Niveles de comprensión lectora.</i></li>
+                        <li><i>La comunicación, elementos y herramientas.</i></li>
+                        <li><i>Gramática normativa, descriptiva y categorías gramaticales.</i></li>
+                        <li><i>Taller de producción textual y escrita.</i></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm space-y-2">
+                    <h3 class="font-bold text-[#1F3C88] text-lg"><i>Unidad III: Literatura Precolombina y Época Colonial</i></h3>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li><i>Literatura precolombina y El Popol Vuh.</i></li>
+                        <li><i>Diferentes tipos de textos y lenguaje no verbal.</i></li>
+                        <li><i>Época Colonial: Rusticatio Mexicana (Rafael Landívar).</i></li>
+                        <li><i>Fábula política (Rafael García Goyena) y Bestiarios.</i></li>
+                        <li><i>Técnicas lectoras y de investigación.</i></li>
+                        <li><i>Taller de producción oral y escrita (Entrevista y Ensayo).</i></li>
+                    </ul>
+                </div>
+                <div class="bg-gray-50 p-5 rounded-xl border border-gray-200 shadow-sm space-y-2">
+                    <h3 class="font-bold text-[#1F3C88] text-lg"><i>Unidad IV: Literatura de los Siglos XIX y XX</i></h3>
+                    <ul class="list-disc pl-5 text-sm space-y-1">
+                        <li><i>Literatura del siglo XIX y XX.</i></li>
+                        <li><i>Textos argumentativos e informativos.</i></li>
+                        <li><i>Preposiciones, conjunciones y sintaxis.</i></li>
+                        <li><i>El diálogo y destrezas de dialogar.</i></li>
+                        <li><i>Taller de producción oral: Mesa Redonda y Debates.</i></li>
+                        <li><i>Taller de producción escrita: Lenguaje figurado.</i></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <script>
+        function switchTab(tabId) {
+            // Ocultar todas las pestañas
+            const contents = document.querySelectorAll('.tab-content');
+            contents.forEach(content => content.classList.add('hidden'));
+
+            // Remover estilos activos de todos los botones
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('bg-[#F2C94C]', 'text-[#1F3C88]');
+                btn.classList.add('bg-[#3F72AF]', 'text-white');
+            });
+
+            // Mostrar la pestaña seleccionada
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Activar el botón correspondiente
+            const activeBtn = document.getElementById('btn-' + tabId);
+            activeBtn.classList.remove('bg-[#3F72AF]', 'text-white');
+            activeBtn.classList.add('bg-[#F2C94C]', 'text-[#1F3C88]');
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen().catch(err => {
+                    console.error("Error al intentar activar pantalla completa:", err);
+                });
+            } else {
+                if (document.exitFullscreen) {
+                    document.exitFullscreen();
+                }
+            }
+        }
+    </script>
+</body>
+</html>
